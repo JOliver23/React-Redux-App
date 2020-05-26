@@ -20,6 +20,12 @@ export const quoteReducer = (state = intitialState, action) => {
                 quote: action.payload,
                 error: ''
             };
+        case 'FETCH_QUOTE_FAILURE':
+            return {
+                ...state,
+                isFetching: false,
+                error: action.payload
+            };
         default:
             return state;
     }

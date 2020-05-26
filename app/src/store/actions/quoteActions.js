@@ -10,6 +10,8 @@ export const fetchQuote = () => {
             .then(res => {
                 dispatch({type: 'FETCH_QUOTE_SUCCESS', payload: res.data.quote})
             })
-            .catch(err => console.log(err.response))
+            .catch(err => {
+                dispatch({type : 'FETCH_QUOTE_FAILURE', payload: err.response.data})
+            })
     }
 }
