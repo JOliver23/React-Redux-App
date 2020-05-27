@@ -16,7 +16,7 @@ const KanyeQuote = props => {
     return (
         <div>
             <h1>Be Your Kanye Best</h1>
-            {props.isFetching && <Loader type="Puff" color="pink" height={100} width={100} timeout={10000} />}
+            {props.isFetching && <Loader type="Hearts" color="pink" height={100} width={100} timeout={10000} />}
             {props.error && <p className="error">{props.error}</p>}
             {props.quote && <h3>"{props.quote}"</h3>}
             <button onClick={props.fetchQuote}>Become A New Kanye</button>
